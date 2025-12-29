@@ -30,7 +30,7 @@ pipeline {
     stage('SAST - Dependency Scan') {
       steps {
         dependencyCheck additionalArguments: '--scan .',
-                        odcInstallation: 'Default'
+                        odcInstallation: 'DC'
       }
     }
 
