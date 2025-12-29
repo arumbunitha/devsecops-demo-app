@@ -44,7 +44,7 @@ pipeline {
 
     stage('Image Scan') {
       steps {
-        sh "trivy image ${APP_NAME}:${IMAGE_TAG}"
+        sh "/opt/homebrew/bin/trivy image ${APP_NAME}:${IMAGE_TAG}"
       }
     }
 
