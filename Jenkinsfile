@@ -1,6 +1,10 @@
 pipeline {
   agent any
 
+  tools {
+    maven 'maven-3'
+  }
+
   environment {
     APP_NAME = "devsecops-demo"
     IMAGE_TAG = "1.0.${BUILD_NUMBER}"
@@ -18,6 +22,7 @@ pipeline {
 
     stage('Build') {
       steps {
+        sh 'mvn -version'
         sh 'mvn clean package'
       }
     }
