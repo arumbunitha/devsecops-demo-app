@@ -38,7 +38,7 @@ pipeline {
 */
     stage('Docker Build') {
       steps {
-        sh "docker build -t ${APP_NAME}:${IMAGE_TAG} ."
+        sh "/usr/local/bin/docker build -t ${APP_NAME}:${IMAGE_TAG} ."
       }
     }
 
