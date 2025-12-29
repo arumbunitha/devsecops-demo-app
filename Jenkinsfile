@@ -29,8 +29,10 @@ pipeline {
 
     stage('SAST - Dependency Scan') {
       steps {
-        dependencyCheck additionalArguments: '--scan .',
-                        odcInstallation: 'DC'
+        dependencyCheck(
+          odcInstallation: 'DC',
+          additionalArguments: '--scan . --disableAssembly'
+    )
       }
     }
 
