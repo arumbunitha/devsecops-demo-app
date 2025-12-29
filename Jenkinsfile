@@ -50,7 +50,7 @@ pipeline {
 */
     stage('Deploy (Mock)') {
       steps {
-        sh 'echo Deploying application (mock stage)'
+        sh 'echo "Deploying application (mock stage)"'
       }
     }
   }
