@@ -22,8 +22,8 @@ pipeline {
 
     stage('Build') {
       steps {
-        sh 'mvn -version'
-        sh 'mvn clean package'
+        sh '/opt/homebrew/bin/mvn -version'
+        sh '/opt/homebrew/bin/mvn clean package'
       }
     }
 
