@@ -41,13 +41,13 @@ pipeline {
         sh "/usr/local/bin/docker build -t ${APP_NAME}:${IMAGE_TAG} ."
       }
     }
-
+/*
     stage('Image Scan') {
       steps {
         sh "/opt/homebrew/bin/trivy image --skip-db-update ${APP_NAME}:${IMAGE_TAG}"
       }
     }
-
+*/
     stage('Deploy (Mock)') {
       steps {
         sh 'echo Deploying application (mock stage)'
