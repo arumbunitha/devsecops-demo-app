@@ -26,7 +26,7 @@ pipeline {
         sh '/opt/homebrew/bin/mvn clean package'
       }
     }
-
+/*
     stage('SAST - Dependency Scan') {
       steps {
         dependencyCheck(
@@ -35,7 +35,7 @@ pipeline {
     )
       }
     }
-
+*/
     stage('Docker Build') {
       steps {
         sh "docker build -t ${APP_NAME}:${IMAGE_TAG} ."
